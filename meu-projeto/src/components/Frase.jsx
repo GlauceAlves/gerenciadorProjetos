@@ -1,6 +1,9 @@
+import styles from './Frase.module.css'
+
 function Frase(){
     return(
-        <div><p>Este é um componente com uma frase</p></div>
+        <div className={styles.fraseContainer}><p>Ola</p>
+            <p className={styles.fraseContent}>Este é um componente com uma frase</p></div>
     )
 }
 

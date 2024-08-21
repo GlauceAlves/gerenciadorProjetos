@@ -4,6 +4,7 @@ import HelloWorld from './components/HelloWorld';
 import Frase from './components/Frase';
 import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
+import List from './components/List';
 
 function App() {
   // crie uma constante e atribua valor a ela Glauce
@@ -13,7 +14,7 @@ function App() {
   function sum(a, b) {
     return a + b
   }
-const url = 'https://via.placeholder.com/150'
+  const url = 'https://via.placeholder.com/150'
 
   return (
     <div className="App">
@@ -24,24 +25,25 @@ const url = 'https://via.placeholder.com/150'
         <p>Ou suar função para somar com {sum(1, 2)}</p>
         {/* incluindo imagem dinamica */}
         <img src={url} alt="Minha imagem" />
-        <HelloWorld/> 
-        <Frase/> 
+        <HelloWorld />
+        <Frase />
         {/* Inserindo a propriedade  */}
-        <SayMyName nome="Maria da propriedade do componente"/>
-        <SayMyName nome="João também esta na prorpiedade como"/>
+        <SayMyName nome="Maria da propriedade do componente" />
+        <SayMyName nome="João também esta na prorpiedade como" />
         <p>Vou colocar as minhas pessoas do meu componente que tem 4 propriedades</p>
-        <Pessoa 
-        nome="Primeira pessoa"
-        idade="28"
-        profissao="Programador"
-        foto={url}
+        <Pessoa
+          nome="Primeira pessoa"
+          idade="28"
+          profissao="Programador"
+          foto={url}
         />
-                <Pessoa 
-        nome="Segunda pessoa"
-        idade="40"
-        profissao="Programador"
-        foto={'https://via.placeholder.com/150'}
+        <Pessoa
+          nome="Segunda pessoa"
+          idade="40"
+          profissao="Programador"
+          foto={'https://via.placeholder.com/150'}
         />
+        <List />
       </header>
     </div>
   );
