@@ -5,6 +5,8 @@ import Frase from './components/Frase';
 import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
 import List from './components/List';
+import Eventos from './components/Eventos';
+import Form from './components/Form';
 
 function App() {
   // crie uma constante e atribua valor a ela Glauce
@@ -19,6 +21,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Testando Eventos</h1>
+        <Eventos numero="1" />
+        <Eventos numero="2" />
+        <Form/>
+
         <h1>Olá , {name} ! Ou se preferir {newname}</h1>
         <p>Meu primeiro app</p>
         <p>Podemos somar com Soma {2 + 2}</p>
@@ -31,6 +38,7 @@ function App() {
         <SayMyName nome="Maria da propriedade do componente" />
         <SayMyName nome="João também esta na prorpiedade como" />
         <p>Vou colocar as minhas pessoas do meu componente que tem 4 propriedades</p>
+        <h1>Testando Css</h1>
         <Pessoa
           nome="Primeira pessoa"
           idade="28"
