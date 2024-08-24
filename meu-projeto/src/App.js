@@ -7,6 +7,9 @@ import Pessoa from './components/Pessoa';
 import List from './components/List';
 import Eventos from './components/Eventos';
 import Form from './components/Form';
+import Condicional from './components/Condicional';
+import OutraLista from './components/OutraLista';
+
 
 function App() {
   // crie uma constante e atribua valor a ela Glauce
@@ -18,13 +21,24 @@ function App() {
   }
   const url = 'https://via.placeholder.com/150'
 
+  // aula 13 - criando array como se tivesse vindo do bd
+  const meusItens = ['React','Vue','Angular']
+
   return (
     <div className="App">
+      <h1>Renderização delistas aula 13</h1>
+      <OutraLista itens={meusItens}/>
+      <OutraLista itens={[]}/>
+
+      <h1>Renderização Condicional aula 12</h1>
+      <Condicional />
+
+
       <header className="App-header">
         <h1>Testando Eventos</h1>
-        <Eventos numero="1" />
-        <Eventos numero="2" />
-        <Form/>
+        <Eventos />
+        {/* <Eventos numero="2" /> */}
+        <Form />
 
         <h1>Olá , {name} ! Ou se preferir {newname}</h1>
         <p>Meu primeiro app</p>
